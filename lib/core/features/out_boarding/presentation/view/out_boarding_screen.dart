@@ -70,8 +70,8 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                 width: ManagerWidth.w10,
                 height: ManagerHeight.h10,
                 title: ManagerStrings.start,
-                textStyle: TextStyle(
-                  color: ManagerColors.black,
+                textStyle: const TextStyle(
+                  color: ManagerColors.primaryColor,
                   fontSize: ManagerFontSizes.s16,
                 ),
                 isVisibleIcon: false,
@@ -83,8 +83,8 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                 width: ManagerWidth.w10,
                 height: ManagerHeight.h10,
                 title: ManagerStrings.next,
-                textStyle: TextStyle(
-                  color: ManagerColors.black,
+                textStyle: const TextStyle(
+                  color: ManagerColors.primaryColor,
                   fontSize: ManagerFontSizes.s16,
                 ),
                 isVisibleIcon: false,
@@ -187,6 +187,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                   },
                   title: ManagerStrings.skip,
                 ),
+
                 child: BaseButton(
                   isVisibleIcon: true,
                   textStyle: TextStyle(

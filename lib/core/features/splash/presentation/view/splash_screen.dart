@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     ManagerStrings.appName,
                     style: TextStyle(
                       fontSize: ManagerFontSizes.s20,
-                      fontWeight: FontWeight.w400
+                      fontWeight: FontWeight.w700,
                     ),
                   )
                 ],

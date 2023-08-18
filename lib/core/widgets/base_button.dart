@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../constants.dart';
 import '../resources/manager_colors.dart';
 import '../resources/manager_font_sizes.dart';
 import '../resources/manager_font_weight.dart';
@@ -8,6 +9,7 @@ import '../resources/manager_width.dart';
 
 // ignore: must_be_immutable
 class BaseButton extends StatelessWidget {
+  final int? spacerFlex;
   final String title;
   final bool isVisibleIcon;
   final double width;
@@ -30,6 +32,7 @@ class BaseButton extends StatelessWidget {
     this.height = ManagerHeight.h50,
     this.bgColor = ManagerColors.primaryColor,
     this.textStyle,
+    this.spacerFlex,
     this.elevation = 2,
     required this.onPressed,
   });
@@ -49,15 +52,15 @@ class BaseButton extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const Spacer(
-            flex: 5,
+           Spacer(
+            flex:spacerFlex ?? Constants.baseButtonFirstSpacerFlex,
           ),
           Text(
             title,
             style: textStyle,
           ),
-          const Spacer(
-            flex: 4,
+           Spacer(
+            flex: spacerFlex ?? Constants.baseButtonSecondSpacerFlex,
           ),
           Visibility(
             visible: isVisibleIcon,

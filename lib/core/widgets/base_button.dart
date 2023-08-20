@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../constants.dart';
+import 'constants.dart';
 import '../resources/manager_colors.dart';
 import '../resources/manager_font_sizes.dart';
 import '../resources/manager_font_weight.dart';

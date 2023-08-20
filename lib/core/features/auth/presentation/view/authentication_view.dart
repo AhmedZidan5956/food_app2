@@ -6,6 +6,7 @@ import 'package:food_app/core/resources/manager_font_weight.dart';
 import 'package:food_app/core/resources/manager_height.dart';
 import 'package:food_app/core/resources/manager_strings.dart';
 import 'package:food_app/core/resources/manager_width.dart';
+import 'package:food_app/core/route/routes.dart';
 import 'package:food_app/core/widgets/base_button.dart';
 
 class AuthenticationView extends StatefulWidget {
@@ -68,7 +69,9 @@ class _AuthenticationViewState extends State<AuthenticationView> {
                   const Spacer(flex: 3,),
                   Column(
                     children: [
-                      BaseButton(onPressed: (){},
+                      BaseButton(onPressed: (){
+                        Navigator.pushNamed(context, Routes.registerView);
+                      },
                         title: ManagerStrings.signUp,
                         textStyle: TextStyle(
                           color: ManagerColors.white,
@@ -78,7 +81,9 @@ class _AuthenticationViewState extends State<AuthenticationView> {
                         spacerFlex: 4,
                       ),
                       const SizedBox( height: ManagerHeight.h22,),
-                      BaseButton(onPressed: (){},
+                      BaseButton(onPressed: (){
+                        Navigator.pushNamed(context, Routes.loginView);
+                      },
                         title: ManagerStrings.signIn,
                         textStyle: const TextStyle(
                           color: ManagerColors.primaryColor,

@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:food_app/core/features/auth/presentation/view/authentication_view.dart';
-
-import 'core/features/out_boarding/presentation/view/out_boarding_screen.dart';
-import 'core/features/splash/presentation/view/splash_screen.dart';
-import 'core/routes.dart';
+import 'package:food_app/core/resources/manager_colors.dart';
+import 'package:get/get_navigation/src/root/get_material_app.dart';
+import 'core/route/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,17 +13,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       theme: ThemeData(
-          useMaterial3: true
+          useMaterial3: true,
+        primaryColor: ManagerColors.white,
       ),
       debugShowCheckedModeBanner: false,
       initialRoute: Routes.splashScreen,
-      routes: {
-        Routes.splashScreen: (context) => const SplashScreen(),
-        Routes.outBoardingScreen: (context) => const OutBoardingScreen(),
-        Routes.authenticationView: (context) => const AuthenticationView(),
-      },
+      onGenerateRoute: RouteGenerator.getRoute,
     );
   }
 }

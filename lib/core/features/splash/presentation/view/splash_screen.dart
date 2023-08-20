@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/core/resources/manager_height.dart';
-import '../../../../constants.dart';
+import '../../../../widgets/constants.dart';
 import '../../../../resources/manager_assets.dart';
 import '../../../../resources/manager_font_sizes.dart';
 import '../../../../resources/manager_strings.dart';
-import '../../../../routes.dart';
+import '../../../../route/routes.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({Key? key}) : super(key: key);
@@ -31,6 +31,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Directionality(
       textDirection: TextDirection.ltr,
       child: Scaffold(
+        extendBodyBehindAppBar: true,
         body: Stack(
           children: [
             Align(
@@ -53,6 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ],
         ),
+        backgroundColor: Colors.white,
       ),
     );
   }

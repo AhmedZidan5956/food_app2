@@ -38,7 +38,7 @@ class _AuthenticationViewState extends State<AuthenticationView> {
           Container(
               width: double.infinity,
               height: double.infinity,
-              margin: const EdgeInsets.symmetric(
+              margin:  EdgeInsets.symmetric(
                 horizontal: ManagerWidth.w50,
               ),
               child: Column(
@@ -80,7 +80,7 @@ class _AuthenticationViewState extends State<AuthenticationView> {
                         ),
                         spacerFlex: 4,
                       ),
-                      const SizedBox( height: ManagerHeight.h22,),
+                       SizedBox( height: ManagerHeight.h22,),
                       BaseButton(onPressed: (){
                         Navigator.pushNamed(context, Routes.loginView);
                       },
@@ -93,7 +93,7 @@ class _AuthenticationViewState extends State<AuthenticationView> {
                         bgColor: ManagerColors.white,
                         spacerFlex: 4,
                       ),
-                      const SizedBox( height: ManagerHeight.h22,),
+                       SizedBox( height: ManagerHeight.h22,),
                       BaseButton(onPressed: (){
                         Navigator.pushNamed(context, Routes.homeView);
                       },

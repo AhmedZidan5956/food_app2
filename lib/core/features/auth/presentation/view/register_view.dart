@@ -53,14 +53,14 @@ class _RegisterViewState extends State<RegisterView> {
       ),
       body: Container(
         alignment: AlignmentDirectional.centerStart,
-        margin: const EdgeInsets.symmetric(
-          horizontal: ManagerWidth.w50,
+        margin:  EdgeInsets.symmetric(
+          horizontal: ManagerWidth.w24,
         ),
     child:SingleChildScrollView(
     child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(height: ManagerHeight.h30, ),
+             SizedBox(height: ManagerHeight.h30, ),
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: Text(
@@ -72,7 +72,7 @@ class _RegisterViewState extends State<RegisterView> {
                 ),
               ),
             ),
-            const SizedBox(height: ManagerHeight.h30, ),
+             SizedBox(height: ManagerHeight.h30, ),
             TextField(
               controller: _userNameTextEditingController,
               cursorColor: ManagerColors.primaryColor,
@@ -96,7 +96,7 @@ class _RegisterViewState extends State<RegisterView> {
                 ),
               ),
             ),
-            const SizedBox(
+             SizedBox(
               height: ManagerHeight.h16,
             ),
             TextField(
@@ -122,7 +122,7 @@ class _RegisterViewState extends State<RegisterView> {
                 ),
               ),
             ),
-            const SizedBox(
+             SizedBox(
               height: ManagerHeight.h16,
             ),
             TextField(
@@ -148,7 +148,7 @@ class _RegisterViewState extends State<RegisterView> {
                 ),
               ),
             ),
-            const SizedBox(
+             SizedBox(
               height: ManagerHeight.h16,
             ),
             TextField(
@@ -174,7 +174,7 @@ class _RegisterViewState extends State<RegisterView> {
                 ),
               ),
             ),
-            const SizedBox(
+             SizedBox(
               height: ManagerHeight.h16,
             ),
             TextField(
@@ -201,7 +201,7 @@ class _RegisterViewState extends State<RegisterView> {
               ),
             ),
 
-            const SizedBox(height: ManagerHeight.h40, ),
+             SizedBox(height: ManagerHeight.h40, ),
             Row(
               children: [
                 Text(
@@ -226,7 +226,7 @@ class _RegisterViewState extends State<RegisterView> {
 
               ],
             ),
-            const SizedBox(height: ManagerHeight.h80, ),
+             SizedBox(height: ManagerHeight.h80, ),
             BaseButton(
               onPressed: () {},
               title: ManagerStrings.register,
@@ -237,7 +237,7 @@ class _RegisterViewState extends State<RegisterView> {
               ),
               spacerFlex: 4,
             ),
-            const SizedBox(height: ManagerHeight.h10, ),
+             SizedBox(height: ManagerHeight.h10, ),
           ],
         ),
     ),),

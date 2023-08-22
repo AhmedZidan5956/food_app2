@@ -13,8 +13,8 @@ class BaseButton extends StatelessWidget {
   final int? spacerFlex;
   String? title = ManagerStrings.start;
   final bool isVisibleIcon;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final Color bgColor;
   final double elevation;
   void Function() onPressed;
@@ -29,8 +29,8 @@ class BaseButton extends StatelessWidget {
     super.key,
     this.title,
     this.isVisibleIcon = false,
-    this.width = ManagerWidth.w64,
-    this.height = ManagerHeight.h50,
+    this.width,
+    this.height ,
     this.bgColor = ManagerColors.primaryColor,
     this.textStyle,
     this.spacerFlex,
@@ -46,8 +46,8 @@ class BaseButton extends StatelessWidget {
         elevation: elevation,
         backgroundColor: bgColor,
         minimumSize: Size(
-          width,
-          height,
+          width?? ManagerWidth.w64,
+          height?? ManagerHeight.h50,
         ),
       ),
       child: Row(

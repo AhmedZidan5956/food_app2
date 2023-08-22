@@ -46,20 +46,20 @@ class _LoginViewState extends State<LoginView> {
         width: double.infinity,
         height: double.infinity,
         alignment: AlignmentDirectional.centerStart,
-        margin: const EdgeInsets.symmetric(
-          horizontal: ManagerWidth.w50,
+        margin:  EdgeInsets.symmetric(
+          horizontal: ManagerWidth.w24,
         ),
         child:SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const SizedBox(height: ManagerHeight.h24, ),
+             SizedBox(height: ManagerHeight.h24, ),
             Image.asset(
               ManagerAssets.splash3,
               width: ManagerWidth.w120,
               height: ManagerHeight.h120,
             ),
-            const SizedBox(height: ManagerHeight.h50, ),
+             SizedBox(height: ManagerHeight.h50, ),
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: Text(
@@ -67,7 +67,7 @@ class _LoginViewState extends State<LoginView> {
                 style: TextStyle(
                   color: ManagerColors.black,
                   fontSize: ManagerFontSizes.s30,
-                  fontWeight: ManagerFontWeight.w600,
+                  fontWeight: ManagerFontWeight.regular,
                 ),
               ),
             ),
@@ -94,7 +94,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ),
             ),
-            const SizedBox(
+             SizedBox(
               height: ManagerHeight.h24,
             ),
             TextField(
@@ -120,7 +120,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ),
             ),
-            const SizedBox(
+             SizedBox(
               height: ManagerHeight.h16,
             ),
             Row(
@@ -138,7 +138,7 @@ class _LoginViewState extends State<LoginView> {
                         ),
                       ),
                     ),
-                    const SizedBox(
+                     SizedBox(
                       width: ManagerWidth.w6,
                     ),
                     Text(
@@ -159,7 +159,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ],
             ),
-            const SizedBox(height: ManagerHeight.h50, ),
+             SizedBox(height: ManagerHeight.h50, ),
             Row(
               children: [
                 Text(
@@ -184,7 +184,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ],
             ),
-            const SizedBox(height: ManagerHeight.h56, ),
+             SizedBox(height: ManagerHeight.h56, ),
             BaseButton(
               onPressed: () {
                 Navigator.pushNamed(context, Routes.homeView);
@@ -197,7 +197,7 @@ class _LoginViewState extends State<LoginView> {
               ),
               spacerFlex: 4,
             ),
-            const SizedBox(height: ManagerHeight.h40, ),
+             SizedBox(height: ManagerHeight.h40, ),
             Text(
               ManagerStrings.or,
               style: TextStyle(
@@ -205,7 +205,7 @@ class _LoginViewState extends State<LoginView> {
                 color: ManagerColors.secondaryColor,
               ),
             ),
-            const SizedBox(height: ManagerHeight.h40, ),
+             SizedBox(height: ManagerHeight.h40, ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -226,7 +226,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ],
             ),
-              const SizedBox(height: ManagerHeight.h10,),
+               SizedBox(height: ManagerHeight.h10,),
           ],
         ),
         ),),

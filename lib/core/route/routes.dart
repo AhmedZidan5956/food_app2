@@ -52,7 +52,7 @@ class RouteGenerator {
                   Image.asset(
                     ManagerAssets.unDefineRoute,
                   ),
-                  const SizedBox(height: ManagerHeight.h14),
+                   SizedBox(height: ManagerHeight.h14),
                   Text(
                     ManagerStrings.notFoundRoute,
                     style: const TextStyle(

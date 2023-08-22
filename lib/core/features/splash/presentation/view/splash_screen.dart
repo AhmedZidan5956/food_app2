@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/core/resources/manager_height.dart';
+import 'package:get/get.dart';
+import '../../../../storage/local/database/shared_preferences/app_settings_shared_preferences.dart';
 import '../../../../widgets/constants.dart';
 import '../../../../resources/manager_assets.dart';
 import '../../../../resources/manager_font_sizes.dart';
@@ -21,7 +23,9 @@ class _SplashScreenState extends State<SplashScreen> {
        const Duration(
         seconds: Constants.splashTime,
       ),
-      () => Navigator.pushReplacementNamed(context, Routes.outBoardingScreen),
+          () => AppSettingsSharedPreferences().outBoardingViewed
+          ? Get.offAllNamed(Routes.authenticationView)
+          : Get.offAllNamed(Routes.outBoardingScreen),
     );
   }
 
@@ -29,7 +33,7 @@ class _SplashScreenState extends State<SplashScreen> {
   Widget build(BuildContext context) {
 
     return Directionality(
-      textDirection: TextDirection.ltr,
+      textDirection: TextDirection.rtl,
       child: Scaffold(
         extendBodyBehindAppBar: true,
         body: Stack(
@@ -42,9 +46,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     ManagerAssets.splash3,
                   ),
                   const SizedBox(height: ManagerHeight.h12),
-                  const Text(
+                   Text(
                     ManagerStrings.appName,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: ManagerFontSizes.s20,
                       fontWeight: FontWeight.w700,
                     ),

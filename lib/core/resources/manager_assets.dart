@@ -10,3 +10,7 @@ class ManagerAssets {
   static const String twitter = 'assets/images/auth/twitter.png';
   static const String unDefineRoute = 'assets/images/un_define_route/un1.png';
 }
+
+class ManagerPaths {
+  static const String translationsPath = 'assets/translations';
+}

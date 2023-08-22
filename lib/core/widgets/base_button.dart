@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/extension/extensions.dart';
 import 'constants.dart';
 import '../resources/manager_colors.dart';
 import '../resources/manager_font_sizes.dart';
@@ -10,7 +11,7 @@ import '../resources/manager_width.dart';
 // ignore: must_be_immutable
 class BaseButton extends StatelessWidget {
   final int? spacerFlex;
-  final String title;
+  String? title = ManagerStrings.start;
   final bool isVisibleIcon;
   final double width;
   final double height;
@@ -26,7 +27,7 @@ class BaseButton extends StatelessWidget {
 
   BaseButton({
     super.key,
-    this.title = ManagerStrings.start,
+    this.title,
     this.isVisibleIcon = false,
     this.width = ManagerWidth.w64,
     this.height = ManagerHeight.h50,
@@ -56,7 +57,7 @@ class BaseButton extends StatelessWidget {
             flex:spacerFlex ?? Constants.baseButtonFirstSpacerFlex,
           ),
           Text(
-            title,
+            title.onNull(),
             style: textStyle,
           ),
            Spacer(

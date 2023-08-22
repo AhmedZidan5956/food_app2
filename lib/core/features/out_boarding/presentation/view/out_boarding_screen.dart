@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/core/storage/local/database/shared_preferences/app_settings_shared_preferences.dart';
 import '../../../../widgets/constants.dart';
 import '../../../../resources/manager_assets.dart';
 import '../../../../resources/manager_colors.dart';
@@ -22,6 +23,7 @@ class OutBoardingScreen extends StatefulWidget {
 class _OutBoardingScreenState extends State<OutBoardingScreen> {
   late PageController _pageController;
   int _currentPageIndex = 0;
+  final AppSettingsSharedPreferences _appSettingsSharedPreferences = AppSettingsSharedPreferences();
 
   @override
   void initState() {
@@ -79,6 +81,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                 bgColor: ManagerColors.transparent,
                 elevation: Constants.elevationZero,
                 onPressed: () {
+                  _appSettingsSharedPreferences.saveViewedOutBoarding();
                   Navigator.pushReplacementNamed(context, Routes.authenticationView);
                 },
               ),
@@ -127,7 +130,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                       _currentPageIndex = value;
                     });
                   },
-                  children: const [
+                  children:  [
                     OutBoardingContent(
                       image: ManagerAssets.outBoarding1,
                       title: ManagerStrings.outBoardingTitle1,
@@ -200,6 +203,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                       color: ManagerColors.white,
                     ),
                     onPressed: () {
+                      _appSettingsSharedPreferences.saveViewedOutBoarding();
                       Navigator.pushReplacementNamed(
                           context, Routes.authenticationView);
                     },

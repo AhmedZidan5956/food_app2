@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/extension/extensions.dart';
 import '../../../../resources/manager_assets.dart';
 import '../../../../resources/manager_colors.dart';
 import '../../../../resources/manager_font_sizes.dart';
@@ -8,14 +9,14 @@ import '../../../../resources/manager_strings.dart';
 
 class OutBoardingContent extends StatelessWidget {
   final String image;
-  final String title;
-  final String subTitle;
+  String? title = ManagerStrings.outBoardingTitle1 ;
+  String? subTitle = ManagerStrings.outBoardingSubTitle1 ;
 
-  const OutBoardingContent({
+   OutBoardingContent({
     super.key,
     this.image = ManagerAssets.outBoarding1,
-    this.title = ManagerStrings.outBoardingTitle1,
-    this.subTitle = ManagerStrings.outBoardingSubTitle1,
+    this.title ,
+    this.subTitle ,
   });
 
   @override
@@ -33,7 +34,7 @@ class OutBoardingContent extends StatelessWidget {
             height: ManagerHeight.h90,
           ),
           Text(
-            title,
+            title.onNull(),
             style: TextStyle(
               fontSize: ManagerFontSizes.s26,
               fontWeight: ManagerFontWeight.bold,
@@ -46,7 +47,7 @@ class OutBoardingContent extends StatelessWidget {
           SizedBox(
             height: ManagerHeight.h100,
             child: Text(
-              subTitle,
+              subTitle.onNull(),
               style: TextStyle(
                 fontSize: ManagerFontSizes.s18,
                 fontWeight: ManagerFontWeight.regular,

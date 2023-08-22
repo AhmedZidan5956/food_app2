@@ -8,6 +8,8 @@ class Constants {
   static const int pageViewSliderDuration = 300;
   static const bool baseButtonVisibleIcon = false;
   static const int outBoardingLastPage = 2;
+  static const double designDeviceWidth = 375;
+  static const double designDeviceHeight = 812;
 }
 
 class KeyConstants {

@@ -94,7 +94,9 @@ class _AuthenticationViewState extends State<AuthenticationView> {
                         spacerFlex: 4,
                       ),
                       const SizedBox( height: ManagerHeight.h22,),
-                      BaseButton(onPressed: (){},
+                      BaseButton(onPressed: (){
+                        Navigator.pushNamed(context, Routes.homeView);
+                      },
                         title: ManagerStrings.visitor,
                         textStyle:  TextStyle(
                           color: ManagerColors.white,

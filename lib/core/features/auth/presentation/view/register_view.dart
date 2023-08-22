@@ -52,18 +52,15 @@ class _RegisterViewState extends State<RegisterView> {
 
       ),
       body: Container(
-        width: double.infinity,
-        height: double.infinity,
         alignment: AlignmentDirectional.centerStart,
         margin: const EdgeInsets.symmetric(
           horizontal: ManagerWidth.w50,
         ),
-        child: Column(
+    child:SingleChildScrollView(
+    child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Spacer(
-              flex: 3,
-            ),
+            const SizedBox(height: ManagerHeight.h30, ),
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: Text(
@@ -75,7 +72,7 @@ class _RegisterViewState extends State<RegisterView> {
                 ),
               ),
             ),
-            const Spacer(flex: 2,),
+            const SizedBox(height: ManagerHeight.h30, ),
             TextField(
               controller: _userNameTextEditingController,
               cursorColor: ManagerColors.primaryColor,
@@ -100,7 +97,7 @@ class _RegisterViewState extends State<RegisterView> {
               ),
             ),
             const SizedBox(
-              height: ManagerHeight.h14,
+              height: ManagerHeight.h16,
             ),
             TextField(
               controller: _emailTextEditingController,
@@ -126,7 +123,7 @@ class _RegisterViewState extends State<RegisterView> {
               ),
             ),
             const SizedBox(
-              height: ManagerHeight.h14,
+              height: ManagerHeight.h16,
             ),
             TextField(
               controller: _phoneTextEditingController,
@@ -152,7 +149,7 @@ class _RegisterViewState extends State<RegisterView> {
               ),
             ),
             const SizedBox(
-              height: ManagerHeight.h14,
+              height: ManagerHeight.h16,
             ),
             TextField(
               controller: _passwordTextEditingController,
@@ -178,7 +175,7 @@ class _RegisterViewState extends State<RegisterView> {
               ),
             ),
             const SizedBox(
-              height: ManagerHeight.h14,
+              height: ManagerHeight.h16,
             ),
             TextField(
               controller: _confirmPasswordTextEditingController,
@@ -204,10 +201,8 @@ class _RegisterViewState extends State<RegisterView> {
               ),
             ),
 
-            const Spacer(
-              flex: 3,
-            ),
-             Row(
+            const SizedBox(height: ManagerHeight.h40, ),
+            Row(
               children: [
                 Text(
                   ManagerStrings.alreadyHaveAccount,
@@ -220,9 +215,9 @@ class _RegisterViewState extends State<RegisterView> {
                   onTap: (){
                     Navigator.pushReplacementNamed(context, Routes.loginView,);
                   },
-                  child:const Text(
+                  child: Text(
                     ManagerStrings.signIn,
-                    style: TextStyle(
+                    style: const TextStyle(
                       color: ManagerColors.primaryColor,
                       fontSize: ManagerFontSizes.s16,
                     ),
@@ -231,9 +226,7 @@ class _RegisterViewState extends State<RegisterView> {
 
               ],
             ),
-            const Spacer(
-              flex: 3,
-            ),
+            const SizedBox(height: ManagerHeight.h80, ),
             BaseButton(
               onPressed: () {},
               title: ManagerStrings.register,
@@ -244,12 +237,10 @@ class _RegisterViewState extends State<RegisterView> {
               ),
               spacerFlex: 4,
             ),
-            const Spacer(
-              flex: 3,
-            ),
+            const SizedBox(height: ManagerHeight.h10, ),
           ],
         ),
-      ),
+    ),),
     );
   }
 }

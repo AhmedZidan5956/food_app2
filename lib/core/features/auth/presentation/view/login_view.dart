@@ -37,6 +37,7 @@ class _LoginViewState extends State<LoginView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // resizeToAvoidBottomInset : false,
       appBar: AppBar(
         backgroundColor: ManagerColors.transparent,
         elevation: 0,
@@ -48,20 +49,17 @@ class _LoginViewState extends State<LoginView> {
         margin: const EdgeInsets.symmetric(
           horizontal: ManagerWidth.w50,
         ),
+        child:SingleChildScrollView(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Spacer(
-              flex: 3,
-            ),
+            const SizedBox(height: ManagerHeight.h24, ),
             Image.asset(
               ManagerAssets.splash3,
               width: ManagerWidth.w120,
               height: ManagerHeight.h120,
             ),
-            const Spacer(
-              flex: 3,
-            ),
+            const SizedBox(height: ManagerHeight.h50, ),
             Align(
               alignment: AlignmentDirectional.centerStart,
               child: Text(
@@ -147,23 +145,21 @@ class _LoginViewState extends State<LoginView> {
                       ManagerStrings.rememberMe,
                       style: TextStyle(
                         color: ManagerColors.black,
-                        fontSize: ManagerFontSizes.s16,
+                        fontSize: ManagerFontSizes.s14,
                       ),
                     ),
                   ],
                 ),
-                const Text(
+                 Text(
                   ManagerStrings.forgotYourPassword,
-                  style: TextStyle(
+                  style: const TextStyle(
                     color: ManagerColors.primaryColor,
-                    fontSize: ManagerFontSizes.s16,
+                    fontSize: ManagerFontSizes.s14,
                   ),
                 ),
               ],
             ),
-            const Spacer(
-              flex: 3,
-            ),
+            const SizedBox(height: ManagerHeight.h50, ),
             Row(
               children: [
                 Text(
@@ -177,9 +173,9 @@ class _LoginViewState extends State<LoginView> {
                   onTap: (){
                     Navigator.pushReplacementNamed(context, Routes.registerView,);
                   },
-                  child: const Text(
+                  child:  Text(
                       ManagerStrings.signUp,
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: ManagerColors.primaryColor,
                         fontSize: ManagerFontSizes.s16,
                       ),
@@ -188,9 +184,7 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ],
             ),
-            const Spacer(
-              flex: 3,
-            ),
+            const SizedBox(height: ManagerHeight.h56, ),
             BaseButton(
               onPressed: () {
                 Navigator.pushNamed(context, Routes.homeView);
@@ -203,9 +197,7 @@ class _LoginViewState extends State<LoginView> {
               ),
               spacerFlex: 4,
             ),
-            const Spacer(
-              flex: 3,
-            ),
+            const SizedBox(height: ManagerHeight.h40, ),
             Text(
               ManagerStrings.or,
               style: TextStyle(
@@ -213,9 +205,7 @@ class _LoginViewState extends State<LoginView> {
                 color: ManagerColors.secondaryColor,
               ),
             ),
-            const Spacer(
-              flex: 2,
-            ),
+            const SizedBox(height: ManagerHeight.h40, ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -236,13 +226,10 @@ class _LoginViewState extends State<LoginView> {
                 ),
               ],
             ),
-            const Spacer(
-              flex: 3,
-            ),
-
+              const SizedBox(height: ManagerHeight.h10,),
           ],
         ),
-      ),
+        ),),
     );
   }
 }

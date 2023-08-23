@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:food_app/extension/extensions.dart';
+import 'constants.dart';
 import '../resources/manager_colors.dart';
 import '../resources/manager_font_sizes.dart';
 import '../resources/manager_font_weight.dart';
@@ -8,10 +10,11 @@ import '../resources/manager_width.dart';
 
 // ignore: must_be_immutable
 class BaseButton extends StatelessWidget {
-  final String title;
+  final int? spacerFlex;
+  String? title = ManagerStrings.start;
   final bool isVisibleIcon;
-  final double width;
-  final double height;
+  final double? width;
+  final double? height;
   final Color bgColor;
   final double elevation;
   void Function() onPressed;
@@ -24,12 +27,13 @@ class BaseButton extends StatelessWidget {
 
   BaseButton({
     super.key,
-    this.title = ManagerStrings.start,
+    this.title,
     this.isVisibleIcon = false,
-    this.width = ManagerWidth.w64,
-    this.height = ManagerHeight.h50,
+    this.width,
+    this.height ,
     this.bgColor = ManagerColors.primaryColor,
     this.textStyle,
+    this.spacerFlex,
     this.elevation = 2,
     required this.onPressed,
   });
@@ -42,22 +46,22 @@ class BaseButton extends StatelessWidget {
         elevation: elevation,
         backgroundColor: bgColor,
         minimumSize: Size(
-          width,
-          height,
+          width?? ManagerWidth.w64,
+          height?? ManagerHeight.h50,
         ),
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          const Spacer(
-            flex: 5,
+           Spacer(
+            flex:spacerFlex ?? Constants.baseButtonFirstSpacerFlex,
           ),
           Text(
-            title,
+            title.onNull(),
             style: textStyle,
           ),
-          const Spacer(
-            flex: 4,
+           Spacer(
+            flex: spacerFlex ?? Constants.baseButtonSecondSpacerFlex,
           ),
           Visibility(
             visible: isVisibleIcon,

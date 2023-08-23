@@ -197,7 +197,7 @@ class _LoginViewState extends State<LoginView> {
               ),
               spacerFlex: 4,
             ),
-             SizedBox(height: ManagerHeight.h40, ),
+             SizedBox(height: ManagerHeight.h24, ),
             Text(
               ManagerStrings.or,
               style: TextStyle(
@@ -205,7 +205,7 @@ class _LoginViewState extends State<LoginView> {
                 color: ManagerColors.secondaryColor,
               ),
             ),
-             SizedBox(height: ManagerHeight.h40, ),
+             SizedBox(height: ManagerHeight.h24, ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

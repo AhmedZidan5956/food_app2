@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:food_app/core/resources/manager_assets.dart';
+import '../../config/dependancy_injection.dart';
 import '../features/auth/presentation/view/authentication_view.dart';
 import '../features/auth/presentation/view/login_view.dart';
 import '../features/auth/presentation/view/register_view.dart';
@@ -23,16 +24,19 @@ class RouteGenerator {
   static Route <dynamic> getRoute(RouteSettings settings) {
     switch (settings.name) {
       case Routes.splashScreen:
+        initSplash();
         return MaterialPageRoute(builder: (_) => const SplashScreen());
       case Routes.outBoardingScreen:
         return MaterialPageRoute(builder: (_) => const OutBoardingScreen());
       case Routes.authenticationView:
+        initAuth();
         return MaterialPageRoute(builder: (_) => const AuthenticationView());
       case Routes.loginView:
         return MaterialPageRoute(builder: (_) => const LoginView());
       case Routes.registerView:
         return MaterialPageRoute(builder: (_) => const RegisterView());
       case Routes.homeView:
+        initHome();
         return MaterialPageRoute(builder: (_) => const HomeView());
       default:
         return unDefineRoute();

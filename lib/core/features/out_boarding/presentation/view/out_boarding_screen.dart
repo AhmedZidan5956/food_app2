@@ -197,6 +197,7 @@ class _OutBoardingScreenState extends State<OutBoardingScreen> {
                   ),
                   child: BaseButton(
                     isVisibleIcon: true,
+                    title: ManagerStrings.start,
                     textStyle: TextStyle(
                       fontSize: ManagerFontSizes.s16,
                       fontWeight: ManagerFontWeight.regular,
